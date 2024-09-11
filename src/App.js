@@ -1,11 +1,18 @@
+// import React from 'react';  // React.useState()  --> 1st approach
+import { useState } from 'react';  // 2nd approach
+
 import './App.scss';
 
 import './components/dummyForm.scss';
 
 function App() {
+  const [email, setEmail] = useState('');
+
   return (
     <div className="App">
-      <h1>Learning React</h1>
+      <div className="text-box">
+        <h1 className="text">Learning React</h1>
+      </div>
 
       <div className="form-box">
         {/* Form Start  */}
