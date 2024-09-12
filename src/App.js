@@ -18,7 +18,7 @@ function App() {
         {/* Form Start  */}
         <form className="form">
           <div className="form__group">
-            <input type="text" className="form__control"/>
+            <input type="email" onChange={event => console.log(event.target.value)} className="form__control"/>
           </div>
 
           <div className="form__group">
