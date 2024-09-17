@@ -9,7 +9,11 @@ function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  console.log('STATE => ', email, password);
+  // console.log('STATE => ', email, password);
+  const handleSubmit = (event) => {
+    event.preventDefault();  // Prevents form submission
+    console.log('STATE => ', email, password);
+  }
 
   return (
     <div className="App">
@@ -19,7 +23,7 @@ function App() {
 
       <div className="form-box">
         {/* Form Start  */}
-        <form className="form">
+        <form onSubmit={handleSubmit} className="form">
           <div className="form__group">
             <input type="email" value={email} onChange={event => setEmail(event.target.value)} className="form__control"/>
           </div>
